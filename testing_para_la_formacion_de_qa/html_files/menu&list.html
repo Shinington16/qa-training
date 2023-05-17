@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Menu and list</title>
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.13/dist/semantic.min.css">
+        <link rel="stylesheet" href="../css_files/menu.css">
+    </head>
+    <body>
+
+        <div>
+            <a href="../php_files/log_out.php"><button id="logout">&#x1f6aa; Log out</button></a>
+            <h1><span id="titulo"></span></h1>
+        </div>
+
+        <div style="float:left">
+
+            <div id="bgColor" class="leftElements topElements divSmall width20">
+                <label for="">¡Cambia el color del fondo!</label>
+                <span class="brSmall"></span>
+                <select name="" id="colorSelect">
+                    <option value="" hidden>Escoja color del fondo</option>
+                    <option value="green">Verde</option>
+                    <option value="red">Rojo</option>
+                    <option value="white">Blanco</option>
+                    <option value="yellow">Amarillo</option>
+                </select>
+            </div>
+
+            <span class="brMedium"></span>
+
+            <div class="leftElements divSmall width20">
+                <label id="textColor">¡Cambia el color del texto!</label>
+                <span class="brSmall"></span>
+                <select name="" id="textColorSelect">
+                    <optgroup label="Colores primarios">
+                        <option value="" hidden>Escoja color del texto</option>
+                        <option value="blue">Azul</option>
+                        <option value="yellow">Amarillo</option>
+                        <option value="red">Rojo</option>
+                    </optgroup>
+                    <optgroup label="Colores secundarios">
+                        <option value="green">Verde</option>
+                        <option value="purple">Morado</option>
+                        <option value="orange">Naranja</option>
+                    </optgroup>
+                </select>
+                
+            </div>
+
+            <span class="brMedium"></span>
+
+            <div class="leftElements divMedium width20">
+                <select name="favouritecolor" multiple class="label ui dropdown width5 multipleNumbers">
+                    <option hidden value="">Seleccione números</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                </select>
+            </div>
+
+        </div>
+
+        <div style="float:left; margin-left: 10vw;">
+            <div class="topElements">
+                <ul>
+                    <li class="nav"><a href="">Documentación</a>
+                        <ul class="menu">
+                            <li><a href="https://www.arimetrics.com/glosario-digital/frontend" target="_blank">Frontend</a>
+                                <ul class="sub menu">
+                                    <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank"><li>HTML</li></a>
+                                    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank"><li>CSS</li></a>
+                                    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank"><li>JavaScript</li></a>
+                                    <a href="https://angular.io/docs" target="_blank"><li>Angular</li></a>
+                                </ul>
+                            </li>
+                            <li><a href="https://www.crehana.com/blog/transformacion-digital/que-es-el-backend-y-como-usarlo/" target="_blank">Backend</a>
+                                <ul class="sub menu">
+                                    <a href="https://docs.oracle.com/en/java/" target="_blank"><li>Java</li></a>
+                                    <a href="https://docs.python.org/3/" target="_blank"><li>Python</li></a>
+                                    <a href="https://www.php.net/docs.php" target="_blank"><li>PHP</li></a>
+                                    <a href="https://docs.spring.io/spring-framework/docs/current/reference/html/" target="_blank"><li>Spring</li></a>
+                                </ul>
+                            </li>
+                            <li><a href="https://www.oracle.com/es/database/what-is-database/" target="_blank">Bases de datos</a>
+                                <ul class="sub menu">
+                                    <a href="https://dev.mysql.com/doc/" target="_blank"><li>MySQL</li></a>
+                                    <a href="https://www.postgresql.org/docs/" target="_blank"><li>PostgreSQL</li></a>
+                                    <a href="https://mariadb.com/kb/en/documentation/" target="_blank"><li>MariaDB</li></a>
+                                    <a href="https://www.sqlite.org/docs.html" target="_blank"><li>SQLite</li></a>
+                                </ul>
+                            </li>
+                            <li><a href="https://keepcoding.io/blog/que-es-el-testing-automatizado/" target="_blank">Testing y automatización</a>
+                                <ul class="sub menu">
+                                    <a href="https://jmeter.apache.org/usermanual/index.html" target="_blank"><li>JMeter</li></a>
+                                    <a href="https://learning.postman.com/docs/publishing-your-api/documenting-your-api/" target="_blank"><li>Postman</li></a>
+                                    <a href="https://www.selenium.dev/selenium/docs/api/py/api.html" target="_blank"><li>Selenium</li></a>
+                                    <a href="https://docs.cypress.io/guides/overview/why-cypress" target="_blank"><li>Cypress</li></a>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav"><a href="https://aws.amazon.com/es/what-is/ide/" target="_blank">IDEs</a>
+                        <ul class="menu">
+                            <a href="https://eclipseide.org/" target="_blank"><li>Eclipse</li></a>
+                            <a href="https://code.visualstudio.com/" target="_blank"><li>Visual Studio Code</li></a>
+                            <a href="https://www.jetbrains.com/idea/" target="_blank"><li>IntelliJ IDEA</li></a>
+                            <a href="https://www.sublimetext.com/" target="_blank"><li>Sublime Text</li></a>
+                        </ul>
+                    </li>
+                    <li class="nav"><a href="https://www.trecebits.com/que-son-los-plugins-de-chrome-y-como-usarlos/" target="_blank">Plugins útiles</a>
+                        <ul class="menu">
+                            <a href="https://letcode.in/letxpath" target="_blank"><li>LetXPath</li></a>
+                            <a href="https://www.lambdatest.com/support/docs/plugins-and-extensions/" target="_blank"><li>LambdaTest</li></a>
+                            <a href="https://chrome.google.com/webstore/detail/cssviewer/ggfgijbpiheegefliciemofobhmofgce?hl=es" target="_blank"><li>CSSViewer</li></a>
+                            <a href="https://webmaker.app/" target="_blank"><li>WebMaker</li></a>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="rightElements">
+
+            </div>
+        </div>
+
+        <script src="../js_files/jquery.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.13/dist/semantic.min.js"></script>
+		<script src="../js_files/main.js"></script>
+        <script src="../js_files/menu&list.js"></script>
+
+        <footer>
+            <div id="footerInfo">
+                <span id="leftFooterOne">
+                <br>
+                <span id="leftFooterTwo"></span>
+                <span id="rightFooter"></span>
+            </div>
+
+        </footer>
+
+    </body>
+
+</html>

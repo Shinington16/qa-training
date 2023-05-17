@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Alert windows</title>
+        <link rel="stylesheet" href="../css_files/alert.css">
+    </head>
+    <body>
+        <div>
+            
+            <a href="../php_files/log_out.php"><button id="logout">&#x1f6aa; Log out</button></a>
+            <h1><span id="titulo"></span></h1>
+        </div>
+        <div>
+            <div>
+                <button onclick="alertDelayed()">Alert con retardo</button>
+                <p id="waitingMessage"></p>
+            </div>
+            <div>
+                <button onclick="alertConfirm()">Alert tipo confirm</button>
+                <p id="confirmMessage"></p>
+            </div>
+            <div>
+                <button onclick="alertPrompt()">Prompt de texto</button>
+                <p> <span id="promptBefore"></span><span class="brSmall"></span>
+                <span id="promptMessage" style="font-style: italic;"></span><span class="brSmall"></span>
+                <span id="promptAfter"></span></p>
+            </div>
+            <span class="brLarge"></span>
+            <div>
+                <label for="">Mensaje primer alert:</label>
+                <input type="text" id="firstAlert">
+                <span class="brSmall"></span>
+                <label for="">Mensaje alert con retardo:</label>
+                <input type="text" id="delayAlert">
+                <span class="brSmall"></span>
+                <label for="">Mensaje alert confirm:</label>
+                <input type="text" id="confirmAlert">
+                <span class="brSmall"></span>
+            </div>
+        </div>
+
+        <script src="../js_files/alert.js"></script>
+
+        <footer>
+            <div id="footerInfo">
+                <span id="leftFooterOne">
+                <br>
+                <span id="leftFooterTwo"></span>
+                <span id="rightFooter"></span>
+            </div>
+
+        </footer>
+
+    </body>
+
+</html>

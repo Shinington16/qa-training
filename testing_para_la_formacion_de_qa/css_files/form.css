@@ -1,0 +1,175 @@
+/*----------------------------ELEMENTOS GRANDES----------------------------*/
+
+body {
+    background-color: #55423d;
+    color: #fff3ec;
+}
+h1{
+    color: #fffffe;
+    font-size: 5vw;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 0vw;
+}
+footer {
+    background-color: #ffc0ad4b;
+    color: #fff3ec;
+    font-size: 1.3vw;
+    font-weight: bold;
+    position: fixed;
+    bottom:0;
+    left:0;
+    width: 100%;
+    height: fit-content;
+}
+input[type="text"], input[type="password"], input[type="date"], input[type="number"] {
+    color: #9656a1;
+    font-weight: bold;
+    border-style:double;
+    width: 8vw;
+    height: 1vw;
+    text-align: right;
+    border-radius: 8px;
+}
+textarea {
+    width: 20vw;
+    height: 6vw;
+    max-height: 12vw;
+    min-height: 2vw;
+    resize:vertical;
+    border: 1px solid #9656a1;
+}
+fieldset {
+    text-align: right;
+    float: right;
+    width: max-content;
+    height: max-content;
+}
+button {
+    background-color: #ffc0ad;
+    color: #271c19;
+    border-color: #ffc0ad;
+    font-size: 1.2vw;
+    font-weight: bold;
+    margin-left: auto;
+    width: fit-content;
+    border-radius: 10px;
+}
+
+
+/*---------------------------ELEMENTOS PEQUEÑOS----------------------------*/
+
+a {
+    color: #e78fb3;
+}
+label {
+    color: #9656a1;
+    font-weight: bold;
+    font-size: 1.2vw;
+}
+
+
+
+/*----------------------------------CLASES---------------------------------*/
+
+.responsive {
+    max-width: max-content;
+    max-height: max-content;
+}
+.width40 {
+    width: 40vw;
+}
+.width30 {
+    width: 30vw;
+}
+.width20 {
+    width: 20vw;
+}
+.width5 {
+    width: 5vw;
+}
+.brSmall {
+    clear: both;
+    display: block;
+    margin-bottom: 0.5vw;
+}
+.brMedium {
+    display:block;
+    margin-bottom: 1.4vw;
+}
+.brLarge {
+    display: block;
+    margin-bottom: 2vw;
+}
+.noMargin {
+    margin: 0.4rem;
+}
+.leftElements {
+    margin-left: 2vw;
+}
+.topElements {
+    margin-top: 2vw;
+}
+.rightElements {
+    margin-right: 2vw;
+}
+.divSmall {
+    background-color: #242629;
+    height: 8vw;
+    min-width: min-content;
+    min-height: min-content;
+    padding: 0.5vw;
+    border-radius: 6%;
+    display: flex;
+    flex-direction: column;
+}
+.divMedium {
+    background-color: #242629;
+    height: 12vw;
+    min-width: min-content;
+
+    padding: 0.8vw;
+    border-radius: 8%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/*------------------------------------ID-----------------------------------*/
+
+#rightFooter {
+    float: right;
+    text-align: right;
+}
+#logout {
+    float: right;
+    margin: 1vw;
+}
+#form {
+    background-color: #242629;
+    text-align: right;
+    padding:2vw;
+    height: max-content;
+    max-height: 70vh;
+    border-radius: 11%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow: auto;
+}
+#leftFooterTwo::before {
+    content: "Ciclo superior de Desarrollo de Aplicaciones Web (DAW)";
+}
+#rightFooter::after {
+    content: "Joan Facundo Tamborini Cabral";
+}
+#leftFooterOne::before {
+    content: "Trabajo de Fin de Grado (TFG)";
+}
+#titulo::before {
+    content: "QA Training";
+}

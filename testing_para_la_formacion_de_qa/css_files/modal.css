@@ -1,0 +1,206 @@
+/*----------------------------ELEMENTOS GRANDES----------------------------*/
+
+body {
+    background-color: #55423d;
+    color: #fff3ec;
+}
+h1{
+    color: #fffffe;
+    font-size: 5vw;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 0vw;
+}
+h2 {
+    color: black;
+    font-size: 3vw;
+    text-align: center;
+    font-weight: bold;
+    top: 0;
+}
+footer {
+    background-color: #ffc0ad4b;
+    color: #fff3ec;
+    font-size: 1.3vw;
+    font-weight: bold;
+    position: fixed;
+    bottom:0;
+    left:0;
+    width: 100%;
+    height: fit-content;
+}
+button {
+    background-color: #ffc0ad;
+    color: #271c19;
+    border-color: #ffc0ad;
+    font-size: 1.2vw;
+    font-weight: bold;
+    margin-left: auto;
+    width: fit-content;
+    border-radius: 10px;
+}
+
+
+/*---------------------------ELEMENTOS PEQUEÑOS----------------------------*/
+
+p {
+    color: #9656a1;
+    font-size: 1.3vw;
+    font-weight: bold;
+}
+
+
+/*----------------------------------CLASES---------------------------------*/
+
+.responsive {
+    max-width: max-content;
+    max-height: max-content;
+}
+.width40 {
+    width: 40vw;
+}
+.width30 {
+    width: 30vw;
+}
+.width20 {
+    width: 20vw;
+}
+.width5 {
+    width: 5vw;
+}
+.brSmall {
+    clear: both;
+    display: block;
+    margin-bottom: 0.5vw;
+}
+.brMedium {
+    display:block;
+    margin-bottom: 1.4vw;
+}
+.brLarge {
+    display: block;
+    margin-bottom: 2vw;
+}
+.noMargin {
+    margin: 0.4rem;
+}
+.leftElements {
+    margin-left: 2vw;
+}
+.topElements {
+    margin-top: 2vw;
+}
+.rightElements {
+    margin-right: 2vw;
+}
+.divSmall {
+    background-color: #242629;
+    height: 8vw;
+    min-width: min-content;
+    min-height: min-content;
+    padding: 0.5vw;
+    border-radius: 6%;
+    display: flex;
+    flex-direction: column;
+}
+.divMedium {
+    background-color: #242629;
+    height: 12vw;
+    min-width: min-content;
+
+    padding: 0.8vw;
+    border-radius: 8%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/*------------------------------------ID-----------------------------------*/
+
+#rightFooter {
+    float: right;
+    text-align: right;
+}
+#logout {
+    float: right;
+    margin: 1vw;
+}
+#modalWindow {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+#modalContent {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    height: 25vw;
+}
+#modalClose {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+#modalClose:hover,
+#modalClose:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+#secondModalWindow {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+#secondModalContent {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    top: 5vw;
+    border: 1px solid #888;
+    width: 50%;
+    height: 15vw;
+}
+#secondModalClose {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+#secondModalClose:hover,
+#secondModalClose:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+#leftFooterTwo::before {
+    content: "Ciclo superior de Desarrollo de Aplicaciones Web (DAW)";
+}
+#rightFooter::after {
+    content: "Joan Facundo Tamborini Cabral";
+}
+#leftFooterOne::before {
+    content: "Trabajo de Fin de Grado (TFG)";
+}
+#titulo::before {
+    content: "QA Training";
+}

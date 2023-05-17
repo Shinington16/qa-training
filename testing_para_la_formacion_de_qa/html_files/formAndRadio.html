@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Form and radio</title>
+        <link rel="stylesheet" href="../css_files/form.css">
+    </head>
+    <body>
+        <div>
+            <a href="../php_files/log_out.php"><button id="logout">&#x1f6aa; Log out</button></a>
+            <h1><span id="titulo"></span></h1>
+        </div>
+        <div class="width40" id="form">
+            <form action="">
+                <label for="">Nombre:</label>
+                <input type="text" placeholder="Nombre" required>
+
+                <span class="brSmall"></span>
+                <label for="">Apellidos:</label>
+                <input type="text" placeholder="Apellidos" required>
+
+                <span class="brSmall"></span>
+                <label for="">Fecha de nacimiento:</label>
+                <input type="date" required>
+
+                <span class="brSmall"></span>
+                <fieldset>
+                    <legend>¿Con quién convive?</legend>
+                    
+                    <label for="">Pareja</label>
+                    <input type="radio" name="conviviente" value="pareja" required>
+
+                    <span class="brSmall"></span>
+                    <label for="">Progenitores</label>
+                    <input type="radio" name="conviviente" value="progenitores">
+
+                    <span class="brSmall"></span>
+                    <label for="">Mascota</label>
+                    <input type="radio" name="conviviente" value="mascota">
+
+                    <span class="brSmall"></span>
+                    <label for="">Comparto piso (indique con cuanta gente)</label>
+                    <input type="radio" name="conviviente" value="otros" class="noMargin">
+                    <input type="number" placeholder="Convivientes">
+                </fieldset>
+
+                <span class="brSmall"></span>
+                <label for="" style="vertical-align: top">Observaciones:</label>
+                <textarea name="" placeholder="Introduzca su comentario (máximo 500 caracteres)" 
+                maxlength="500"></textarea>
+
+                <span class="brSmall"></span>
+                <button>Validar</button>
+            </form>
+        </div>
+        <div>
+
+        </div>
+        <footer>
+            <div id="footerInfo">
+                <span id="leftFooterOne">
+                <br>
+                <span id="leftFooterTwo"></span>
+                <span id="rightFooter"></span>
+            </div>
+
+        </footer>
+
+    </body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Buttons</title>
+        <link rel="stylesheet" href="../css_files/button.css">
+    </head>
+    <body onload="botonDinamico(); botonRetardo()">
+
+        <script src="../js_files/button.js"></script>
+
+        <div>
+            
+            <a href="../php_files/log_out.php"><button id="logout">&#x1f6aa; Log out</button></a>
+            <h1><span id="titulo"></span></h1>
+        </div>
+
+        <div>
+            <button ondblclick="doubleClick()">Botón de doble click</button>
+            <p class="pButton" id="clickDoble"></p>
+
+            <div id="contenedor">
+            </div>
+            <p class="pButton" id="clickDinamico"></p>
+
+            <button id="delayedButton" onclick="botonInvisible()">&#x2716;&#xfe0f; Botón con retardo</button>
+            <p class="pButton">Pulse el botón cuando esté habilitado para mostrar el siguiente.</p>
+
+            <button oncontextmenu="rightClick()" id="rightButton" hidden="true">Botón de click derecho</button>
+            <p class="pButton" id="clickDerecho"></p>
+
+        </div>
+
+        <div>
+        </div>
+
+        <footer>
+            <div id="footerInfo">
+                <span id="leftFooterOne">
+                <br>
+                <span id="leftFooterTwo"></span>
+                <span id="rightFooter"></span>
+            </div>
+
+        </footer>
+
+    </body>
+
+</html>

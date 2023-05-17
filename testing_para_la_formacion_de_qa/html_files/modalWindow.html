@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Modal windows</title>
+        <link rel="stylesheet" href="../css_files/modal.css">
+    </head>
+    <body>
+        <div>
+            
+            <a href="../php_files/log_out.php"><button id="logout">&#x1f6aa; Log out</button></a>
+            <h1><span id="titulo"></span></h1>
+        </div>
+
+        <div>
+            <button onclick="windowMessage()">Mensaje emergente</button>
+            <span class="brMedium"></span>
+            <button id="modalButton" class="modalButton">Abrir ventana modal</button>
+            <div id="modalWindow" class="modalWindow">
+                <div id="modalContent" class="modalContent">
+                    <span id="modalClose" class="modalClose">&times;</span>
+                    <h2>Título de la ventana modal.</h2>
+                    <p>Este texto se muestra dentro de una ventana modal. Puede cerrarla en la "x" que aparece en la 
+                        esquina superior derecha, o abrir una nueva ventana modal en el siguiente botón:</p>
+                    <button id="secondModalButton" class="modalButton">Abrir segundo modal</button>
+                    <div id="secondModalWindow" class="modalWindow">
+                        <div id="secondModalContent" class="modalContent">
+                            <span id="secondModalClose" class="modalClose">&times;</span>
+                            <h2>Título de la segunda ventana modal.</h2>
+                            <p>Para evitar que se pierda en un bucle de ventanas modales, aquí sólo le ofrecemos la 
+                                opción de salir. ¡Vuelva cuando quiera!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <span class="brMedium"></span>
+            <button onclick="newWindow()">Nueva ventana</button>
+            <span class="brMedium"></span>
+            <button onclick="newTab()">Nueva pestaña</button>
+        </div>
+
+        <script src="../js_files/modal.js"></script>
+
+        <footer>
+            <div id="footerInfo">
+                <span id="leftFooterOne">
+                <br>
+                <span id="leftFooterTwo"></span>
+                <span id="rightFooter"></span>
+            </div>
+
+        </footer>
+
+    </body>
+
+</html>

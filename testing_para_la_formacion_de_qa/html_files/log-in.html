@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Log in</title>
+        <link rel="stylesheet" href="../css_files/log_in.css">
+    </head>
+    <body>
+        <h1><span id="titulo"></span></h1>
+
+        <div id="userinfo">
+            <label class="responsive">Generador de contraseña</label>
+            <span class="brSmall"></span>
+                <select class="responsive" name="nombre de usuario" id="userSelect">
+                    <option value="" hidden>Seleccione nombre de usuario</option>
+                    <option value="form&radio">form&radio</option>
+                    <option value="button">button</option>
+                    <option value="dinamicElements">dinamicElements</option>
+                    <option value="modalWindow">modalWindow</option>
+                    <option value="alertWindow">alertWindow</option>
+                    <option value="menu&list">menu&list</option>
+                    <option value="otherInput">otherInput</option>
+                    <option value="movingElements">movingElements</option>
+                </select>
+                <span class="brMedium"></span>
+                <button id="generatePass" type="button" onclick="generarContrasena()">Generar</button>
+                <span id="passGenerated"></span>
+
+        </div>
+        <div id="login">
+            <p style="position: sticky; text-align: center; font-size: 2.4vw;">Log-in</p>
+            <div>
+                <form method="POST" action="../php_files/log_in.php">
+                <label class="responsive" for="usuario">Nombre de usuario:</label>
+                <input class="responsive" type ="text" name="username" maxlength="15" placeholder="Usuario &#x1f511;" required>
+            </div>
+            <span class="brSmall"></span>
+            <div>
+                <label class="responsive" for="contrasena">Contraseña:</label>
+                <input class="responsive" type="password" name="password" maxlength="11" placeholder="Contraseña &#x1f512;" required>
+            </div>
+            <span class="brSmall"></span>
+            <button type="submit" class="responsive" name="btn-login">Acceder</button>
+        </div>
+        <div id="howto">
+            <p>Este sitio web ha sido diseñado con el objetivo de facilitar el aprendizaje de técnicas 
+                de testing en personas que estén formándose para trabajar de QA, así como permitir realizar
+                pruebas mediante el uso de herramientas de automatización como Cypress y Selenium.
+                Escoja un nombre de usuario de la lista que aparece a la izquierda y podrá ver la contraseña 
+                correspondiente. Introduzca los datos para acceder al sitio. Cada usuario dará acceso a 
+                una parte diferente de la página, y contendrá distintos elementos con los que interactuar.</p>
+        </div>
+
+        <script src="../js_files/log_in.js"></script>
+           
+        <footer>
+            <div id="footerInfo">
+                <span id="leftFooterOne">
+                <br>
+                <span id="leftFooterTwo"></span>
+                <span id="rightFooter"></span>
+            </div>
+
+        </footer>
+
+    </body>
+
+</html>

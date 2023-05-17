@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Dinamic elements</title>
+        <link rel="stylesheet" href="../css_files/dinamic.css">
+    </head>
+    <body>
+        <div>
+            
+            <a href="../php_files/log_out.php"><button id="logout">&#x1f6aa; Log out</button></a>
+            <h1><span id="titulo"></span></h1>
+        </div>
+
+        <div id="myProgress">
+            <div id="myBar"></div>
+        </div>
+        <span class="brSmall"></span>
+        <div id="contenedor">
+            <button id="cargar" onclick="move()">Comenzar carga</button>
+            <div class="tooltip-container">
+                <p id="tooltip-text"></p>
+            </div>
+            <p id="carga"></p>
+        </div>
+        <span class="brLarge"></span>
+        <span class="brLarge"></span>
+        <div id="slider_container">
+            <input type="range" min="0" max="100" value="0" id="slider">
+            <div class="tooltip-container_value">
+                <p id="tooltip-value"></p>
+            </div>
+            <p id="output">0</p>
+        </div>
+
+          <script src="../js_files/dinamic.js"></script>
+        <footer>
+            <div id="footerInfo">
+                <span id="leftFooterOne">
+                <br>
+                <span id="leftFooterTwo"></span>
+                <span id="rightFooter"></span>
+            </div>
+
+        </footer>
+
+    </body>
+
+</html>

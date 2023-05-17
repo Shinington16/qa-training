@@ -1,0 +1,231 @@
+/*----------------------------ELEMENTOS GRANDES----------------------------*/
+
+body {
+    background-color: #55423d;
+    color: #fff3ec;
+}
+h1{
+    color: #fffffe;
+    font-size: 5vw;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 0vw;
+}
+footer {
+    background-color: #ffc0ad4b;
+    color: #fff3ec;
+    font-size: 1.3vw;
+    font-weight: bold;
+    position: fixed;
+    bottom:0;
+    left:0;
+    width: 100%;
+    height: fit-content;
+}
+button {
+    background-color: #ffc0ad;
+    color: #271c19;
+    border-color: #ffc0ad;
+    font-size: 1.2vw;
+    font-weight: bold;
+    margin-left: auto;
+    width: fit-content;
+    border-radius: 10px;
+}
+
+
+/*---------------------------ELEMENTOS PEQUEÑOS----------------------------*/
+
+
+
+
+/*----------------------------------CLASES---------------------------------*/
+
+.responsive {
+    max-width: max-content;
+    max-height: max-content;
+}
+.width40 {
+    width: 40vw;
+}
+.width30 {
+    width: 30vw;
+}
+.width20 {
+    width: 20vw;
+}
+.width5 {
+    width: 5vw;
+}
+.brSmall {
+    clear: both;
+    display: block;
+    margin-bottom: 0.5vw;
+}
+.brMedium {
+    display:block;
+    margin-bottom: 1.4vw;
+}
+.brLarge {
+    display: block;
+    margin-bottom: 2vw;
+}
+.noMargin {
+    margin: 0.4rem;
+}
+.leftElements {
+    margin-left: 2vw;
+}
+.topElements {
+    margin-top: 2vw;
+}
+.rightElements {
+    margin-right: 2vw;
+}
+.divSmall {
+    background-color: #242629;
+    height: 8vw;
+    min-width: min-content;
+    min-height: min-content;
+    padding: 0.5vw;
+    border-radius: 6%;
+    display: flex;
+    flex-direction: column;
+}
+.divMedium {
+    background-color: #242629;
+    height: 12vw;
+    min-width: min-content;
+
+    padding: 0.8vw;
+    border-radius: 8%;
+    display: flex;
+    flex-direction: column;
+}
+.tooltip-container {
+    position: relative;
+    float:right;
+}
+.tooltip-container_value {
+    position:relative;
+    left: 15.2vw;
+    top: 1.6vw;
+}
+
+
+/*------------------------------------ID-----------------------------------*/
+
+#rightFooter {
+    float: right;
+    text-align: right;
+}
+#logout {
+    float: right;
+    margin: 1vw;
+}
+#contenedor {
+    width: 30%;
+}
+#myProgress {
+    width: 30%;
+    background-color: #ddd;
+    border-radius: 8px;
+}
+#cargar {
+    float:left;
+    margin-top: 0.8vw;
+}
+#carga {
+    font-size: 1.2vw;
+    float:right;
+    color: #04AA6D;
+}
+#myBar {
+    width: 0%;
+    height: 1.2vw;
+    border-radius: 8px;
+    background-color: #04AA6D;
+}
+p#tooltip-text:before {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 35%;
+    border: 8px solid transparent;
+    border-bottom: 8px solid #242629;
+}
+p#tooltip-text {
+    display: none;
+    position: absolute;
+    top: 2.2vw;
+    left: -3.5vw;
+    background: #242629;
+    padding: 0.4vw;
+    font-size: 1.2vw;
+    color: #9656a1;
+    border-radius: 2px;
+    animation: fadeIn 2.5s;
+}
+p#tooltip-value:before {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 35%;
+    border: 8px solid transparent;
+    border-bottom: 8px solid #242629;
+}
+p#tooltip-value {
+    display: none;
+    position: absolute;
+    top: 2.2vw;
+    left: -3.5vw;
+    background: #242629;
+    padding: 0.4vw;
+    font-size: 1.2vw;
+    color: #9656a1;
+    border-radius: 2px;
+    animation: fadeIn 2.5s;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+#slider_container {
+    width: 30%;
+    margin-top: 5vw;
+}
+#output {
+    font-size: 2vw;
+    text-align: center;
+}
+#slider {
+    width: 100%;
+    background: linear-gradient(to right, #9018a0 0%, #562192 0%, #111111 0%, #fff 100%);
+    height: 0.7vw;
+    -webkit-appearance: none;
+    border-radius: 25px;
+}
+#slider::-webkit-slider-thumb {
+    cursor:crosshair;
+    appearance: none;
+    height: 1.5vw;
+    width: 1.5vw;
+    background-color: #801da7;
+    border-radius: 50%;
+}
+#leftFooterTwo::before {
+    content: "Ciclo superior de Desarrollo de Aplicaciones Web (DAW)";
+}
+#rightFooter::after {
+    content: "Joan Facundo Tamborini Cabral";
+}
+#leftFooterOne::before {
+    content: "Trabajo de Fin de Grado (TFG)";
+}
+#titulo::before {
+    content: "QA Training";
+}
