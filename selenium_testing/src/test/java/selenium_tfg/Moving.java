@@ -41,26 +41,16 @@ public class Moving {
 		Actions act = new Actions(chrome);					
 
 		WebElement dragable = chrome.findElement(By.id("movingDiv"));
-		WebElement list = chrome.findElement(By.className("list"));
-		WebElement firstList = chrome.findElement(By.xpath("//div[text()[normalize-space()='Primer elemento']]"));
-		WebElement secondList = chrome.findElement(By.xpath("//div[text()[normalize-space()='Segundo elemento']]"));
-		WebElement thirdList = chrome.findElement(By.xpath("//div[text()[normalize-space()='Tercer elemento']]"));
-		WebElement fourthList = chrome.findElement(By.xpath("//div[text()[normalize-space()='Cuarto elemento']]"));
-		WebElement fifthList = chrome.findElement(By.xpath("//div[text()[normalize-space()='Quinto elemento']]"));
-		act.dragAndDrop(fourthList, thirdList).build().perform();
 		int screenWidth = chrome.manage().window().getSize().getWidth();
 		int screenHeight = chrome.manage().window().getSize().getHeight();
 		float ejeX = (float) (screenWidth*0.64);
 		float ejeY = (float) (0-(screenHeight*0.12));
 
-		act.dragAndDrop(dragable, thirdList);
 		Funciones.uWait(10);
 		act.dragAndDropBy(dragable, Math.round(ejeX), Math.round(ejeY)).build().perform();
+		act.dragAndDropBy(dragable, -70, -10).build().perform();
 
 		Funciones.uWait(10);
-		//act.dragAndDrop(fourthList, thirdList).build().perform();
-		//act.clickAndHold(fourthList).moveByOffset(fourthList.getLocation().getX(), thirdList.getLocation().getY()).release().build().perform(); 
-
 		
 	}
 }

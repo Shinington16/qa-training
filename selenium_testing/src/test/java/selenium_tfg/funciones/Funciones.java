@@ -5,8 +5,10 @@ import java.io.InputStream;
 import java.time.Duration;
 import java.util.NoSuchElementException;
 import java.util.Properties;
+import java.util.Set;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -19,6 +21,9 @@ public class Funciones {
 
     static WebDriver chrome;
     static Properties props = new Properties();
+    static String mainTab;
+    static String firstTab;
+    static String secondTab;
 
     public static void tearDown() throws InterruptedException {
         uWait(10);
@@ -27,6 +32,8 @@ public class Funciones {
 		uWait(10);
 		chrome.quit();
     }
+
+
 
     public static void login(String locator) {
 
@@ -112,4 +119,41 @@ public class Funciones {
         }).isDisplayed();
     }
 
+    public static void threeTabsLogin(Properties propiedades, String mainUrl, String firstUrl, String secondUrl) throws InterruptedException {
+
+        mainTab = chrome.getWindowHandle();
+        firstTab = "";
+        secondTab = "";
+        Funciones.uWait(20);
+        ((JavascriptExecutor)chrome).executeScript("window.open()");
+        Funciones.uWait(20);
+        ((JavascriptExecutor)chrome).executeScript("window.open()");
+        Funciones.uWait(20);
+        Set<String> handles = chrome.getWindowHandles();
+        //Funciones.login(mainUrl);
+        Funciones.uWait(20);
+
+        int i = 1;
+        for (String actual : handles) {
+            if (!actual.equalsIgnoreCase(mainTab)) {
+                if (i==1) {
+                    chrome.switchTo().window(actual);
+                    firstTab = actual;
+                    chrome.get(propiedades.getProperty("baseUrl"));
+                    Funciones.uWait(20);
+                    Funciones.login(firstUrl);
+                    Funciones.uWait(20);
+                }
+            } else if (i==2) {
+                chrome.switchTo().window(actual);
+                secondTab = actual;
+                chrome.get(propiedades.getProperty("baseUrl"));
+                Funciones.uWait(20);
+                Funciones.login(secondUrl);
+                Funciones.uWait(20);
+            }
+            i++;
+        }
+        chrome.switchTo().window(firstTab);
+    }
 }
