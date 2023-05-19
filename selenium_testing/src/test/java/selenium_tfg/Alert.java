@@ -76,7 +76,7 @@ public class Alert {
 	}
 
 	@Test(priority=3)
-	public void prompt() {
+	public void prompt() throws InterruptedException {
 
 		String mensaje = "Este es mi mensaje personalizado.";
 
@@ -101,8 +101,6 @@ public class Alert {
 		Assert.assertTrue(promptBefore2.getText().contains("su mensaje:"));
 		Assert.assertEquals(mensaje, promptMessage2.getText());
 
-
-
-
+		Funciones.uWait(5);
 	}
 }

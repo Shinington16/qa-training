@@ -1,7 +1,7 @@
 <?php
     $servername = "localhost";
     $username_db = "root";
-    $password_db = "admin";
+    $password_db = "";
     $dbname = "formacion_qa";
 
     $conn = mysqli_connect($servername, $username_db, $password_db, $dbname);

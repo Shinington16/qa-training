@@ -1,13 +1,12 @@
 package selenium_tfg;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Properties;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
-import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -36,7 +35,44 @@ public class Modal {
 	}
 
 	@Test(priority=2)
-	public void buttons() throws InterruptedException {
+	public void modalWindow() throws InterruptedException {
 
+		chrome.findElement(By.xpath("//button[text()='Mensaje emergente']")).click();
+
+		ArrayList<String> windows = new ArrayList<String> (chrome.getWindowHandles());
+		chrome.switchTo().window(windows.get(0));
+		chrome.switchTo().window(windows.get(1));
+		chrome.close();
+		chrome.switchTo().window(windows.get(0));
+
+		WebElement modal = chrome.findElement(By.id("modalButton"));
+		modal.click();
+		chrome.findElement(By.id("modalClose")).click();
+		modal.click();
+		chrome.findElement(By.id("secondModalButton")).click();
+		chrome.findElement(By.id("secondModalClose")).click();
+		chrome.findElement(By.id("modalClose")).click();
 	}
+
+	@Test(priority=3)
+	public void windowTab() throws InterruptedException {
+
+		chrome.findElement(By.xpath("//button[text()='Nueva ventana']")).click();
+		chrome.findElement(By.xpath("//button[text()='Nueva pestaña']")).click();
+
+		ArrayList<String> windows = new ArrayList<String> (chrome.getWindowHandles());
+		chrome.switchTo().window(windows.get(0));
+		chrome.switchTo().window(windows.get(1));
+		chrome.get("http://localhost/proyecto_tfg/html_files/log_in.html");
+		chrome.switchTo().window(windows.get(2));
+		chrome.get("http://localhost/proyecto_tfg/html_files/log_in.html");
+		chrome.switchTo().window(windows.get(0));
+		chrome.switchTo().window(windows.get(1));
+		chrome.navigate().back();
+		chrome.close();
+		chrome.switchTo().window(windows.get(2));
+		chrome.close();
+		chrome.switchTo().window(windows.get(0));
+	}
+
 }

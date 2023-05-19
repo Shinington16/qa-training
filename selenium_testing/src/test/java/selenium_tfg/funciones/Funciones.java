@@ -35,7 +35,7 @@ public class Funciones {
 
 
 
-    public static void login(String locator) {
+    public static void login(String locator) throws InterruptedException {
 
         WebElement userSelect = chrome.findElement(By.id("userSelect"));
 		userSelect.click();

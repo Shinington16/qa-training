@@ -8,7 +8,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -69,7 +68,7 @@ public class Menu {
 	}
 
 	@Test(priority=2)
-	public void multiSelect() {
+	public void multiSelect() throws InterruptedException {
 
 		WebElement multiSelect = chrome.findElement(By.xpath("//i[@class='dropdown icon']"));
 		multiSelect.click();
@@ -128,17 +127,10 @@ public class Menu {
 		chrome.findElement(By.xpath("//li[text()='Selenium']")).click();
 
 		ArrayList<String> tabs = new ArrayList<String> (chrome.getWindowHandles());
-		Funciones.uWait(5);
 		chrome.switchTo().window(tabs.get(0));
-		Funciones.uWait(5);
 		chrome.switchTo().window(tabs.get(1));
 		chrome.findElement(By.linkText("Webdriver.chrome")).click();
-		Funciones.uWait(5);
 		chrome.close();
 		chrome.switchTo().window(tabs.get(0));
-
-
-
-
 	}
 }

@@ -44,13 +44,18 @@ public class Moving {
 		int screenWidth = chrome.manage().window().getSize().getWidth();
 		int screenHeight = chrome.manage().window().getSize().getHeight();
 		float ejeX = (float) (screenWidth*0.64);
-		float ejeY = (float) (0-(screenHeight*0.12));
+		float ejeY = (float) (screenHeight*0.32);
 
-		Funciones.uWait(10);
+		Funciones.uWait(6);
 		act.dragAndDropBy(dragable, Math.round(ejeX), Math.round(ejeY)).build().perform();
-		act.dragAndDropBy(dragable, -70, -10).build().perform();
-
-		Funciones.uWait(10);
+		Funciones.uWait(6);
+		act.dragAndDropBy(dragable, -390, -70).build().perform();
+		Funciones.uWait(6);
+		act.dragAndDropBy(dragable, 150, 40).build().perform();
+		Funciones.uWait(6);
+		act.dragAndDropBy(dragable, -120, -60).build().perform();
+		Funciones.uWait(6);
+		act.dragAndDropBy(dragable, 240, 70).build().perform();
 		
 	}
 }

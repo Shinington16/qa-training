@@ -38,36 +38,31 @@ public class Form {
 
 		WebElement nombre = chrome.findElement(By.xpath("//input[@placeholder='Nombre']"));
 		nombre.sendKeys("Facundo");
-		Funciones.uWait(5);
+		Funciones.uWait(2);
 		WebElement apellidos = chrome.findElement(By.xpath("//input[@placeholder='Apellidos']"));
 		apellidos.sendKeys("Tamborini");
-		Funciones.uWait(5);
+		Funciones.uWait(2);
 		WebElement fecha = chrome.findElement(By.xpath("//input[@type='date']"));
 		fecha.sendKeys("05101990");
-		Funciones.uWait(5);
+		Funciones.uWait(2);
 		WebElement observaciones = chrome.findElement(By.xpath("//div[@id='form']//textarea[1]"));
 		observaciones.sendKeys("Quiero recibir información adicional sobre la página.");
+		Funciones.uWait(2);
 	}
 
 	@Test(priority=3)
 	public void radio() throws InterruptedException {
 		
 		chrome.findElement(By.xpath("(//input[@type='radio'])[1]")).click();
-		Funciones.uWait(5);
-
+		Funciones.uWait(2);
 		chrome.findElement(By.xpath("(//input[@type='radio'])[2]")).click();
-		Funciones.uWait(5);
-
+		Funciones.uWait(2);
 		chrome.findElement(By.xpath("(//input[@type='radio'])[3]")).click();
-		Funciones.uWait(5);
-
+		Funciones.uWait(2);
 		chrome.findElement(By.xpath("(//input[@type='radio'])[4]")).click();
-		Funciones.uWait(5);
-
+		Funciones.uWait(2);
 		chrome.findElement(By.xpath("//input[@type='number']")).sendKeys("4");
-
-		Funciones.uWait(5);
+		Funciones.uWait(2);
 		chrome.findElement(By.xpath("//button[text()='Validar']")).click();
-		Funciones.uWait(5);
 	}
 }

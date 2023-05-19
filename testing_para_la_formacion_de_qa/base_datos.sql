@@ -1,12 +1,14 @@
-CREATE TABLE usuarios (
+CREATE DATABASE formacion_qa;
+
+CREATE TABLE users (
   id INT AUTO_INCREMENT PRIMARY KEY,
-  usuario VARCHAR(50) NOT NULL,
-  contrasena VARCHAR(50) NOT NULL,
-  tipo_usuario ENUM('admin', 'usuario_normal') NOT NULL DEFAULT 'usuario_normal'
+  user VARCHAR(50) NOT NULL,
+  pass VARCHAR(50) NOT NULL,
+  user_type ENUM('admin', 'usuario_normal') NOT NULL DEFAULT 'usuario_normal'
 );
 
 
-INSERT INTO users(USERNAME, PASSWORD, USER_TYPE) VALUES 
+INSERT INTO users (user, pass, user_type) VALUES 
 	('admin', '123456789', 'admin'),
         ('form&radio', 'form1234', 'reg_user'),
         ('button', 'button1234', 'reg_user'),

@@ -38,7 +38,7 @@
                 echo "<script>window.location='../html_files/movingElements.html'</script>";
                 break;
             default:
-            echo "<script> window.location='../html_files/log-in.html'; alert('Nombre de usuario o contraseña incorrecta');</script>";
+            echo "<script> window.location='../html_files/log_in.html'; alert('Nombre de usuario o contraseña incorrecta');</script>";
         }
         $conn->close();
     }
